@@ -112,7 +112,7 @@ if (gsutil ls ${TF_STATE_BUCKET} &>/dev/null)
     echo -e "Admin Project: The Terraform state bucket ($TF_STATE_BUCKET) for ($TF_VAR_admin_project) already exists."
   else
     echo -e "Admin Project: Creating Terraform state bucket ($TF_STATE_BUCKET) for ($TF_VAR_admin_project)."
-    gsutil mb -p ${TF_VAR_admin_project} ${TF_STATE_BUCKET}
+    gsutil mb -p ${TF_VAR_admin_project} ${TF_STATE_BUCKET} -c multi_regional -b
     gsutil versioning set on ${TF_STATE_BUCKET}
 fi
 
