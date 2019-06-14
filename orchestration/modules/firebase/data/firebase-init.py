@@ -8,6 +8,9 @@ PROJECT_ID = os.environ['project_id']
 SERVICE_ACCOUNT_FILE = os.environ['service_account_file']
 SCOPES = ['https://www.googleapis.com/auth/cloud-platform', 'https://www.googleapis.com/auth/firebase']
 
+print(PROJECT_ID)
+print(SERVICE_ACCOUNT_FILE)
+
 credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
@@ -19,5 +22,5 @@ body = {
   'locationId': 'europe-west2'
 }
 
-#response = firebase.projects().addFirebase(project=f'projects/{PROJECT_ID}', body=body).execute()
-#print(response)
+response = firebase.projects().addFirebase(project=f'projects/{PROJECT_ID}', body=body).execute()
+print(response)

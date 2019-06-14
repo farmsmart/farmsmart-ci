@@ -15,7 +15,7 @@ variable "organisation_id" {
 }
 
 variable "stage" {
-  default = "dev-archie"
+  default = "production"
 }
 
 variable "region" {

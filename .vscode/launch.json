@@ -11,7 +11,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "env": {"project_id":"farmsmart-dev-archie", "service_account_file":"/Users/archie/.config/gcloud/service-account.json"}
+            "env": {"project_id":"farmsmart-production", "service_account_file":"/Users/archie/.config/gcloud/service-account.json"}
         }
     ]
 }
